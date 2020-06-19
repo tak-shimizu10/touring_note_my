@@ -1,0 +1,23 @@
+<header>
+  <div class="inner-header__menu-bar">
+    <h1 class="app_name"><a href="/">TouringNote</a></h1>
+    <% if user_signed_in? %>
+      <div class="user_nav guest__menu">
+        <span><%= current_user.nickname %>
+          <ul class="user__info">
+            <li>
+              <%= link_to "マイページ", "/users/#{current_user.id}" %>
+              <%= link_to "ログアウト", "/users/sign_out", method: :delete %>
+            </li>
+          </ul>
+        </span>
+        <%= link_to "投稿する", "/posts/new", class: "guest" %>
+      </div>
+    <% else %>
+      <div class="guest__menu">
+        <%= link_to "ログイン", "/users/sign_in", class: "guest" %>
+        <%= link_to "新規登録", "/users/sign_up", class: "guest" %>
+      </div>
+    <% end %>
+  </div>
+</header>
