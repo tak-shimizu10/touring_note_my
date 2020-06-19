@@ -1,0 +1,120 @@
+h2 {
+  display: block;
+  font-weight: bold;
+  font-size: 22px;
+}
+.error {
+  color: red;
+}
+
+.form_container {
+  width: 700px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  &__head {
+    padding: 15px;
+    border-bottom: 1px solid darkgray;
+  }
+  &__form {
+    padding: 30px;
+    .new_user__wrap {
+      display: flex;
+      justify-content: center;
+      &__image_box {
+        width: 40%;
+      }
+      &__input_box {
+      }
+    }
+  }
+}
+.form_container_half {
+  width: 50%;
+}
+.new_user {
+  justify-content: center;
+}
+.field {
+  margin: 0 0 15px;
+  position: relative;
+  &__box {
+    &__right {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+.field label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 5px;
+  color: black;
+}
+.input-default,
+.select-default {
+  height: 48px;
+  width: 100%;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  background-color: white;
+  font-size: 16px;
+}
+.input-default_half {
+  width: 50%;
+}
+.new_thumbnail {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  &__input_image {
+    font-size: 1.3rem;
+    position: absolute;
+    cursor: pointer;
+    &__file {
+      display: none;
+    }
+  }
+}
+.field-birthday_select {
+  display: flex;
+}
+.input-field-multiple__separate-text {
+  margin: 22px 8px 0;
+}
+.year,
+.month,
+.day {
+  height: 48px;
+  position: relative;
+  z-index: 2;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.actions {
+  text-align: center;
+  input[type="submit"] {
+    height: 48px;
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #ffa500;
+    border: 3px solid #ffa500;
+    &:hover {
+      background-color: lighten(#ffa500, 10%);
+      color: lighten(white, 10%);
+    }
+  }
+}
