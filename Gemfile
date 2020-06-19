@@ -79,7 +79,6 @@ end
 
 gem "devise"
 gem "mini_magick"
-gem "haml-rails"
 gem "jquery-rails"
 gem "kaminari"
 gem "fog-aws"
