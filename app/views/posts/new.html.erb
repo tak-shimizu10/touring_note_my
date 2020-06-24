@@ -1,0 +1,35 @@
+<%= render 'templates/form_header' %>
+
+<div class="wrapper">
+  <section class="contents_top">
+    <div class="form_container">
+      <div class="form_container__head">
+        <h2>投稿する</h2>
+      </div>
+      <div class="form_container__form">
+        <%= form_with(model: @post, local: true) do |f| %>
+          <div class="field">
+            <div class="post_img_box">
+              <img id="prevImage">
+            </div>
+            <%= f.file_field :post_image, id: "myImage", accept: "image/*" %>
+          </div>
+          <div class="field">
+            <%= f.collection_select :tag_id, Tag.all, :id, :tag, {autofocus: true, include_blank: "カテゴリーを選択して下さい"}, {class: "select-default"} %>
+          </div>
+          <div class="field">
+            <%= f.text_field :title, class: "input-default", placeholder: "タイトル" %>
+          </div>
+          <div class="field">
+            <%= f.text_area :text, class: "form_text", placeholder: "投稿内容（100文字以内）" , rows: "8", maxlength: "100" %>
+          </div>
+          <div class="actions">
+            <%= f.submit "送 信" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%= render 'templates/footer' %>

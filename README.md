@@ -78,7 +78,6 @@ Things you may want to cover:
 | Column        | Type       | Options           |
 | ------------- | ---------- | ----------------- |
 | tag           | string     |                   |
-| post          | references | foreign_key: true |
 ### Association
 - has_many :posts, through: :post_tags
 - has_many :post_tags, dependent: :destroy
