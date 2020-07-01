@@ -12,7 +12,7 @@
             <div class="post_img_box">
               <img id="prevImage">
             </div>
-            <%= f.file_field :post_image, id: "myImage", accept: "image/*" %>
+            <%= f.file_field :image, id: "myImage", accept: "image/*" %>
           </div>
           <div class="field">
             <%= f.collection_select :tag_id, Tag.all, :id, :tag, {autofocus: true, include_blank: "カテゴリーを選択して下さい"}, {class: "select-default"} %>

@@ -7,24 +7,17 @@
         <% @posts.each do |post| %>
           <li class="post_li">
             <div class="post_block">
-              <a href="">
-                <img src=<%= post.image %> alt="post_image" class="post_img">
-                <div class="post_title">
-                  <%= post.title %>
-                </div>
-              </a>
+              <a href=""><img src=<%= post.image %> alt="post_image" class="post_img"></a>
             </div>
+            <a class="post_tag" href="">#<%= post.tag.tag %></a>
+            <p class="post_title"><%= post.title %></p>
             <div class="post_block">
               <a href="/users/<%= post.user.id %>">
                 <div class="info_box">
                   <img src=<%= post.user.avatar_image %> alt="user_avatar_image" class="user_thumbnail">
                   <div class="info_info">
-                    <p class="post_date">
-                      <%= l post.created_at, format: :long %>
-                    </p>
-                    <p class="user_name">
-                      <%= post.user.nickname %>
-                    </p>
+                    <p class="post_date"><%= l post.created_at, format: :long %></p>
+                    <p class="user_name"><%= post.user.nickname %></p>
                   </div>
                 </div>
               </a>
