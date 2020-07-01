@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
     user = User.find(params[:id])
     @nickname = user.nickname
+    @avatar_image = user.avatar_image
     @posts = user.posts.order("created_at DESC").page(params[:page]).per(5)
     @posts = Post.includes(:user)
   end

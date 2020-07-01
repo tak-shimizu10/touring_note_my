@@ -14,7 +14,8 @@ a {
 .contents_top {
   padding: 80px 60px;
 }
-.posts {
+.posts,
+.content {
   margin: 0 auto;
   max-width: 770px;
 }
@@ -52,11 +53,25 @@ a {
   object-fit: cover;
   margin-bottom: 5px;
 }
+.post_tag {
+  font-size: 14px;
+  color: #2323ff;
+  &:hover {
+    color: #ffa500;
+  }
+}
 .post_title {
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: bold;
   border-bottom: 1px solid darkgray;
+}
+.post_date {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.post_text {
+  
 }
 .info_box {
   display: flex;
@@ -70,10 +85,6 @@ a {
 }
 .info_info {
   margin-left: 10px;
-}
-.post_date {
-  margin-top: 5px;
-  font-size: 12px;
 }
 .user_name {
   font-size: 14px;
